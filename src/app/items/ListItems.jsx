@@ -1,7 +1,9 @@
-import Link from "next/link";
-import React, { useState, useEffect } from "react";
+"use client";
 
-const Accueil = () => {
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+
+const ListItems = () => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -59,21 +61,8 @@ const Accueil = () => {
 
   return (
     <main className="flex min-h-screen flex-col p-5">
-      <div className="lg:2/6 xl:w-2/4 mt-10 lg:mt-5 lg:ml-6 text-left">
-        <div className="text-6xl font-semibold text-gray-900 leading-none">
-          Project for Online products
-        </div>
-        <div className="mt-6 text-xl font-light text-true-gray-500 antialiased">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
-          perferendis officiis doloremque officia hic quis consectetur ad earum
-          laborum at, saepe, ducimus qui distinctio culpa eius in asperiores
-          ullam perspiciatis.
-        </div>
-      </div>
-      <br />
-
-      <h1 className="text-xl text-gray-700 font-bold p-4 mb-2">
-        List of all items
+      <h1 className="text-center text-3xl text-gray-700 font-bold bg-slate-500/10 p-4 mb-2">
+        Available Items Now
       </h1>
 
       <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-2">
@@ -83,4 +72,4 @@ const Accueil = () => {
   );
 };
 
-export default Accueil;
+export default ListItems;
